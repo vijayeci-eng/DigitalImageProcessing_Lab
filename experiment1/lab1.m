@@ -3,7 +3,7 @@ function lab1(cap)
 clc;
 close all;
 
- I = imread(cap);
+  I = imread(cap);
  
  
 % Get the size of the image (rows, columns, and color channels)
