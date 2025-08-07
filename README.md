@@ -25,3 +25,34 @@ This experiment focuses on fundamental operations in image processing using MATL
 ---
 
 # DigitalImageProcessing_Lab
+# 🧪 Bit Slicing in Grayscale Image using MATLAB (Without Built-in Bit Functions)
+
+## 📌 Project Overview
+
+This MATLAB project performs **bit-plane slicing** on a grayscale version of a color image **without using any built-in bit manipulation functions** (like `bitget`, `bitand`, etc.).
+
+Bit-plane slicing is a fundamental technique in **Digital Image Processing (DIP)** used to analyze the contribution of each bit in the pixel's binary representation.
+
+---
+
+## 🧠 What This Code Does
+
+1. Reads a color image (`cap.jpg`).
+2. Converts the color image to grayscale using manual averaging.
+3. Extracts each bit (from LSB to MSB) **manually** using arithmetic operations.
+4. Displays all 8 bit-planes using subplots.
+
+---
+
+## 💻 Code Features
+
+- 🚫 No use of MATLAB's built-in bit functions (`bitget`, `bitshift`, etc.)
+- 🧮 Bit values are extracted using `mod()` and `floor()` operations only.
+- 🖼️ Grayscale conversion is performed using RGB average.
+- 🔢 Bit planes are displayed from **LSB (Bit Plane 1)** to **MSB (Bit Plane 8)** for better understanding.
+
+---
+
+## 📂 File Structure
+
+
