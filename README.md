@@ -1,58 +1,89 @@
-# 🧪 Experiment 1 – Basic Image Processing in MATLAB
+# 🧪 Digital Image Processing Lab – MATLAB
 
-This experiment focuses on fundamental operations in image processing using MATLAB. It includes converting a color image to grayscale, separating RGB color planes, and converting a grayscale image into a binary (black and white) format.
+This repository contains MATLAB experiments demonstrating fundamental and intermediate image processing techniques without relying on certain built-in functions, for better understanding of the underlying algorithms.
 
 ---
 
-## 📄 Descriptions
+## 📂 Experiments
+
+---
+
+## 🧪 Experiment 1 – Basic Image Processing in MATLAB
+
+### 📌 Overview
+This experiment covers basic image operations:
+1. Converting a color image to grayscale.
+2. Separating RGB color planes.
+3. Converting grayscale to binary.
+
+---
 
 ### 🔹 1a. RGB to Grayscale Conversion
 - **Objective**: Convert a color image into a grayscale image.
-- **Description**: Grayscale images are single-channel images where each pixel represents brightness intensity. This transformation reduces the complexity of color data while preserving structural content of the image. MATLAB computes grayscale values using a weighted sum of the RGB components.
+- **Description**: Grayscale images represent brightness intensity in a single channel, reducing data complexity while preserving image structure.
 
 ---
 
 ### 🔹 1b. RGB Color Plane Separation
 - **Objective**: Extract individual Red, Green, and Blue components from an RGB image.
-- **Description**: An RGB image is composed of three color channels. Separating these planes allows visualization of how each color contributes to the full image. Each plane is displayed as a grayscale image indicating intensity of that color component.
+- **Description**: Displays each color channel separately, showing how each contributes to the final image.
 
 ---
 
-### 🔹 1c. Grayscale to Black and White (Binary) Conversion
-- **Objective**: Convert a grayscale image to a binary (black and white) image.
-- **Description**: Binary images contain only two pixel values—0 (black) and 1 (white). This conversion is commonly used in thresholding and object segmentation. Pixels above a specified threshold become white; those below become black. MATLAB supports both manual and automatic thresholding methods.
+### 🔹 1c. Grayscale to Binary Conversion
+- **Objective**: Convert a grayscale image into black-and-white format.
+- **Description**: Uses thresholding to classify pixels as either black (0) or white (1).
 
 ---
 
-# DigitalImageProcessing_Lab
-# 🧪 Bit Slicing in Grayscale Image using MATLAB (Without Built-in Bit Functions)
+## 🧪 Experiment 2a – Bit Slicing in Grayscale Image (Without Built-in Functions)
 
-## 📌 Project Overview
+### 📌 Overview
+This experiment performs **bit-plane slicing** on a grayscale image without using MATLAB's built-in bitwise functions (`bitget`, `bitand`, etc.).
 
-This MATLAB project performs **bit-plane slicing** on a grayscale version of a color image **without using any built-in bit manipulation functions** (like `bitget`, `bitand`, etc.).
-
-Bit-plane slicing is a fundamental technique in **Digital Image Processing (DIP)** used to analyze the contribution of each bit in the pixel's binary representation.
+Bit-plane slicing reveals the contribution of each bit in a pixel's binary representation.
 
 ---
 
-## 🧠 What This Code Does
-
-1. Reads a color image (`cap.jpg`).
-2. Converts the color image to grayscale using manual averaging.
-3. Extracts each bit (from LSB to MSB) **manually** using arithmetic operations.
-4. Displays all 8 bit-planes using subplots.
+### 🛠 Process
+1. Read a color image (`csp.jpg`).
+2. Convert it to grayscale manually using RGB averaging.
+3. Extract bits from LSB (bit 1) to MSB (bit 8) using only arithmetic operations.
+4. Display each bit-plane in subplots.
 
 ---
 
-## 💻 Code Features
+### 🚀 Features
+- No built-in bitwise functions.
+- Bit extraction using `mod()` and `floor()` only.
+- Displays all 8 bit-planes for analysis.
 
-- 🚫 No use of MATLAB's built-in bit functions (`bitget`, `bitshift`, etc.)
-- 🧮 Bit values are extracted using `mod()` and `floor()` operations only.
-- 🖼️ Grayscale conversion is performed using RGB average.
-- 🔢 Bit planes are displayed from **LSB (Bit Plane 1)** to **MSB (Bit Plane 8)** for better understanding.
+---
+
+## 🧪 Experiment 2b – Histogram Equalization in MATLAB
+
+### 📌 Overview
+This experiment implements **Histogram Equalization** to enhance image contrast by redistributing pixel intensity values.
+
+The method is coded manually without MATLAB's built-in histogram equalization functions.
+
+---
+
+### 🛠 Process
+1. Read the input image (`demo.jpg` or any custom image).
+2. Convert to grayscale if RGB.
+3. Calculate histogram of pixel intensities.
+4. Compute the **CDF** (Cumulative Distribution Function).
+5. Apply the equalization formula to map old values to new ones.
+6. Display the original and equalized images alongside their histograms.
+
+---
+
+### 🚀 Features
+- Works for both grayscale and RGB images.
+- Manual computation of histogram and CDF.
+- Side-by-side visualization of original vs. equalized results.
 
 ---
 
 ## 📂 File Structure
-
-
